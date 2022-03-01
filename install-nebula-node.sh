@@ -43,6 +43,10 @@ download-nebula-binaries(){
     ARCH=$(get-arch)
 
     case "${ARCH}" in
+	"AMD")
+	    NEBULA_BINS_LINK="${NEBULA_BINS_LINUX_AMD64}"
+	    NEBULA_BINS_OUTPUT_FILENAME=$(get-last-from-url "${NEBULA_BINS_LINK}")
+	    ;;
 	"ARMv6-compatible")
 	    NEBULA_BINS_LINK="${NEBULA_BINS_LINUX_ARMv6}"
 	    NEBULA_BINS_OUTPUT_FILENAME=$(get-last-from-url "${NEBULA_BINS_LINK}")
